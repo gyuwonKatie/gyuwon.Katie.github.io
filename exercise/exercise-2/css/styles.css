@@ -1,0 +1,16 @@
+body {
+    background-color: aqua;
+    max-width: 800px;
+    margin-left: 20%;
+}
+p {
+    font-size: 20px;
+    font-family:sans-serif;
+}
+
+.highlighted-text{
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: bisque;
+    padding: 1rem;
+}

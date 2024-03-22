@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+            background-color: #FFFF00; /* Yellow background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Align items vertically */
+        }
+
+        .banana-house {
+            display: inline-block;
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .food-emoji {
+            position: absolute;
+            animation: fall 5s linear infinite; /* Adjust the duration of the animation as needed */
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banana-house">🍌🏠🍌</div>
+    <h1 onmouseover="changeBackgroundColor()">Home Sweet Home</h1>
+    <h2><a href="project-1/index.html">Welcome in</a></h2>
+
+    <script>
+        function changeBackgroundColor() {
+            var blueShades = ['#0074D9', '#39CCCC', '#3D9970', '#2ECC40', '#FFDC00', '#FF851B', '#FF4136', '#B10DC9', '#001f3f'];
+            var randomIndex = Math.floor(Math.random() * blueShades.length);
+            var randomColor = blueShades[randomIndex];
+            document.body.style.backgroundColor = randomColor;
+
+            // Create food emojis
+            var emojis = ['🍔', '🍕', '🌭', '🥪', '🍟', '🍗', '🥩', '🥗', '🌮', '🥙'];
+            var numEmojis = 10; // Adjust the number of emojis as needed
+
+            for (var i = 0; i < numEmojis; i++) {
+                var emoji = document.createElement('div');
+                emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.className = 'food-emoji';
+                emoji.style.left = Math.random() * window.innerWidth + 'px';
+                document.body.appendChild(emoji);
+            }
+        }
+    </script>
+</body>
+</html>
