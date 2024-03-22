@@ -1,7 +1,22 @@
 body {
-    background-color: aqua;
+    background-color: rgb(255, 169, 212);
     max-width: 800px;
-    margin-left: 20%;
+    margin: auto;
+
+    main {
+        background-color: rgb(230, 207, 255);
+    }
+}
+img{
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+    border: 2px solid black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    box-sizing: border-box;
+
 }
 p {
     font-size: 20px;
@@ -9,8 +24,8 @@ p {
 }
 
 .highlighted-text{
-    color: blue;
+    color: rgb(0, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     padding: 1rem;
 }
