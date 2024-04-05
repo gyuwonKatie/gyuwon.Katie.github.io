@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    flex-basis: 75%;
+    border: 1px solid red;
+    padding: 2rem;
+}
+
+section{
+    border: 1px solid blue;
+    padding: 2rem;
+}
+
+ol{
+    list-style: none;
+}
+
+a{
+    display: inline-block;
+    border: 1px solid green;
+    padding: 2rem;
+}
