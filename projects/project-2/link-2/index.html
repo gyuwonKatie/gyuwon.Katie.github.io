@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Food Fortune</title>
+  <style>
+    body {
+      margin: 40;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    #food-image {
+      max-width: 80%;
+      max-height: 300px;
+      margin: 20px auto;
+      display: none; /* Initially hide the image */
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 70px;
+      background-color: #32956e;
+      color: white;
+      border: none;
+      border-radius:50px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #50b888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Food Fortune</h1>
+  <img src="" id="food-image" alt="Food Image">
+  <button onclick="showRandomFood()">Get Random Food</button>
+
+  <script>
+    const fortune = ["Taco/burrito", "Kbbq", "Malatang", "Pasta", "tangsuyook", "sushi", "Buldak", "Boiling seafood", "Burger", "Pizza", "Fried Chicken", "Fried Rice", "Curry", "Boba", "Bread"];
+    const foodImages = {
+      "Taco/burrito": "https://i.pinimg.com/originals/7c/f2/97/7cf2971a592f647b25d73462dbae941a.gif",
+      "Kbbq": "https://i.pinimg.com/originals/4d/ee/4d/4dee4d5f720be34de3d0c69af0994f3f.gif",
+      "Malatang": "https://i.pinimg.com/originals/c8/64/14/c8641475e3233bf4956cd4379b3cc866.gif",
+      "Pasta": "https://i.pinimg.com/originals/0c/67/86/0c678678c6d1eea5ddd270669e401082.gif",
+      "Pho": "https://i.pinimg.com/originals/f4/e8/f7/f4e8f74fa362c06fde6cec84dd6a5c9f.gif",
+      "sushi": "https://i.pinimg.com/originals/8a/0e/3b/8a0e3b3f26a513413c0449d4f4e8876a.gif",
+      "Buldak": "https://i.pinimg.com/originals/67/30/9e/67309ee252303613399e71184e1c6b8e.gif",
+      "Boiling seafood": "https://i.pinimg.com/originals/ea/bf/8c/eabf8c8a0baf6e62b7e07477537fe1cc.gif",
+      "Burger": "https://i.pinimg.com/originals/58/76/de/5876de05f919a8a5b94b35c16d2d231a.gif",
+      "Pizza": "https://i.pinimg.com/originals/a4/36/70/a43670c098fa0835f20ee13da3fe4214.gif",
+      "Fried Chicken": "https://i.pinimg.com/originals/1f/5c/64/1f5c641137e51fe97eb507535baef381.gif",
+      "Fried Rice": "https://i.pinimg.com/originals/3e/3e/77/3e3e77cb6029c7bcbf534b91ad97e48b.gif",
+      "Curry": "https://i.pinimg.com/originals/6d/06/0b/6d060b5501e39008b76e99af04d3006e.gif",
+      "Boba": "https://i.pinimg.com/originals/6f/99/44/6f994467f2988036d5cd5c8423639712.gif",
+      "Bread": "https://i.pinimg.com/originals/93/42/15/934215a4d40128bf071ee435142e59aa.gif"
+    };
+
+    function showRandomFood() {
+      const randomIndex = Math.floor(Math.random() * fortune.length);
+      const randomFood = fortune[randomIndex];
+      const foodImageSrc = foodImages[randomFood];
+      
+      // Display the food image
+      const foodImage = document.getElementById("food-image");
+      foodImage.src = foodImageSrc;
+      foodImage.style.display = "inline";
+    }
+  </script>
+</body>
+</html>
+
