@@ -1,0 +1,42 @@
+/* fonts */
+@font-face {
+    font-family: 'Absans';
+    src: url('../fonts/Absans-Regular.woff2');
+}
+
+/* body  */
+body {
+    background-color: rgb(255, 255, 255);
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Absans', sans-serif;
+}
+
+
+/* images */
+img {
+    max-width: 100%;
+    padding: 1rem;
+    border: border-width border-style border-color;
+    border-width: 4px;
+    border-style:line;
+    border-color: rgb(0, 130, 37);
+    box-sizing: border-box;
+}
+
+/* text */
+p {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'SpratVF', Regular;
+}
+
+/* header 3 */
+h3 {
+    color:rgb(7, 58, 20)
+}
+
+/* header 1 */
+h1 {
+    color:rgb(136, 255, 148)
+}

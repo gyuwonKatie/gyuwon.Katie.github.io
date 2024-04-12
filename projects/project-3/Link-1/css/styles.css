@@ -1,0 +1,21 @@
+/* Add CSS for screen-fitted images here */
+div.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px; /* Adjust the gap between images as needed */
+    justify-items: center;
+}
+
+.container img {
+    width: 300px; /* Adjust the width of the images */
+    height: 400px; /* Auto height to maintain aspect ratio */
+    border: 2px solid yellow; /* Add a yellow border to each image */
+    object-fit: cover; /* Ensure images maintain aspect ratio and fill the container */
+    transition: transform 0.3s ease; /* Add transition effect to transform property */
+}
+
+.container img:hover {
+    transform: rotate(360deg); /* Rotate the image 360 degrees on hover */
+}
+
+
