@@ -1,0 +1,192 @@
+@font-face {
+	font-family: "Absans";
+	src: url("../font/Absans-Regular.woff2") format("woff2");
+	font-weight: normal;
+}
+
+body {
+	background-color: #d0eae6;
+
+	max-width: 100%;
+	position: relative;
+	margin: 0;
+	display: block; 
+
+	gap: 2rem;
+
+	align-items: start;
+	/* font-family: 'Courier New', Courier, monospace, sans-serif; */
+	font-family: 'Absans', sans-serif;
+
+	display: block;
+
+	gap: 2rem;
+
+	align-items: start;
+
+	@media screen and (min-width: 60rem){
+		margin: 2rem;
+		display: grid;
+		grid-template-columns: 400px 1fr; 
+	}
+
+}
+
+p {
+	font-size: 20px;
+	/* font-family: sans-serif; */
+}
+.navigation {
+	/*position: fixed;*/
+	border: 1px solid darkgoldenrod; 
+	/* float: left; */
+	top: 0;
+	left: 0;
+	padding: 1rem;
+	margin: 1rem;
+	position: relative; 
+	display: none;
+
+	@media screen and (min-width: 40rem){
+		display: block;
+		margin-top: 1rem;
+		font-size: 0.9rem;
+	}
+
+	@media screen and (min-width: 60rem){
+		position: sticky; 
+		top: 2rem; 
+	}
+}
+.navigation a{
+	display: block;
+	text-decoration: none;
+	padding: 0.5rem;
+	font-family: sans-serif;
+	color: darkgoldenrod; 
+
+	transition: color 1s ease;
+
+}
+.navigation a:hover {
+	color: black; 
+}
+
+:target:before {
+	content: "😊";
+	display: inline-block;
+
+	animation: current-header 1s ease infinite reverse; 
+}
+
+@keyframes current-header{
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	100% {
+		transform: rotate(360deg) scale(2);
+	}
+}
+
+.navigation ol{
+	list-style: none;
+}
+.navigation ol{
+	margin: 0;
+	padding: 0;
+}
+.navigation_primary > li:last-child{
+	border-bottom: none; 
+}
+
+.intro-text {
+	background-color: lightgreen;
+	font-family: serif;
+	color: green;
+	width: 50%;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+.navigation ol{
+	list-style: none;
+}
+
+.navigation li{
+	border-bottom: 1px solid darkgoldenrod;
+}
+
+/* related article styles */
+.related {
+	background-color: rgb(224, 130, 255);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.related_section-title {
+	font-family: 'Courier New', Courier, monospace; 
+}
+
+.related_essay {
+	background-color: rgb(136, 225, 255);
+	border: 1px solid black;
+	margin-bottom: 1rem;
+	width: 100%;
+	padding: 1rem; 
+	box-sizing: border-box; 
+	margin: 1rem;
+	flex-basis: calc(100% / 3);
+}
+
+.related_title {
+	font-family: sans-serif; 
+}
+
+.related_author {
+	font-family: sans-serif; 
+}
+
+
+/* flexbox example */
+/* .related {
+	background-color: rgb(254, 255, 193);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.related__section-title {
+	flex-basis: 100%;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.related__essay {
+	border: 1px solid black;
+	background-color: rgb(175, 214, 227);
+	padding: 1rem;
+	flex-basis: calc(100% / 3);
+	box-sizing: border-box;
+}
+
+.related__title {
+	font-family: sans-serif;
+}
+
+.related__author {
+	font-family: sans-serif;
+} */
+
+/* nth-child example */
+/* .related__essay:nth-child(odd) {
+	background-color: rgb(175, 214, 227);
+}
+
+.related__essay:nth-child(odd) {
+	background-color: rgb(175, 227, 210);
+} */
+
+
+
+/* 
